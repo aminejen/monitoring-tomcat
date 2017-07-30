@@ -1,0 +1,24 @@
+<h1>Monitoring Session Config</h1>
+<ul>
+  <li>
+    <input  [(ngModel)]="serverConfig.tomcatApplicationUrl" placeholder="Tomcat application url..."/>
+  </li>
+  <li>
+    <input  [(ngModel)]="serverConfig.tomcatUserName" placeholder="Tomcat manager user name..."/>
+  </li>
+  <li>
+    <input  [(ngModel)]="serverConfig.tomcatPassword" placeholder="Tomcat manager password..."/>
+  </li>
+  <li>
+    <input  [(ngModel)]="serverConfig.excelFolderUrl" placeholder="Excel files folder..."/>
+  </li>
+  <li>
+    <button [disabled]="!serverConfig.isValid()" (click)="saveServerConfig()">Submit</button>
+  </li>
+</ul>
+
+
+
+
+
+
