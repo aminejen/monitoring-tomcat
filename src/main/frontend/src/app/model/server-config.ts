@@ -11,11 +11,11 @@ export class ServerConfig {
     this.excelFolderUrl = excelFolderUrl;
   }
 
-  isValid():boolean {
-    return this.tomcatApplicationUrl.length>0 &&
-      this.tomcatUserName.length>0 &&
-      this.tomcatPassword.length>0 &&
-      this.excelFolderUrl.length>0  ;
+  static isValid(serverConfig:ServerConfig):boolean {
+    return serverConfig.tomcatApplicationUrl.length>0 &&
+      serverConfig.tomcatUserName.length>0 &&
+      serverConfig.tomcatPassword.length>0 &&
+      serverConfig.excelFolderUrl.length>0  ;
   }
 
 

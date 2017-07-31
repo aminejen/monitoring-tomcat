@@ -13,7 +13,8 @@
     <input  [(ngModel)]="serverConfig.excelFolderUrl" placeholder="Excel files folder..."/>
   </li>
   <li>
-    <button [disabled]="!serverConfig.isValid()" (click)="saveServerConfig()">Submit</button>
+    <a routerLink="/dashboard"></a>
+    <button [disabled]="isValid" (click)="saveServerConfig()">Submit</button>
   </li>
 </ul>
 

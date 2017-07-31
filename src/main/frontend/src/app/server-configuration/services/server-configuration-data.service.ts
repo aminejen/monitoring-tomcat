@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response ,Headers, RequestOptions } from '@angular/http';
 import { ServerConfig } from '../../model/server-config'
-import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
 @Injectable()
@@ -20,9 +19,7 @@ export class ServerConfigurationDataService {
   }
 
   getServerConfig() {
-    this.http.get(this.url).subscribe(
-      (data)=> console.log(data.json())
-    )
+    return this.http.get(this.url);
   }
 
 }

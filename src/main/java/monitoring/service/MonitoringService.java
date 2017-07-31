@@ -75,7 +75,7 @@ public class MonitoringService {
 
     private DataCapture getFormatedMemoryThreadString(String data) {
         String usedMemory = data.split("</td></tr><tr><td>G1 Survivor Space")[0].split("Heap memory")[2].split("</td><td>")[4].split("\\.")[0];
-        String busyThreads = data.split("Current thread busy: ")[1].split(" ")[0].split("</br>")[0];
+        String busyThreads = data.split("Current thread busy: ")[1].split(" ")[0].split("<br>")[0];
         return new DataCapture(new Date().getTime(), Long.valueOf(usedMemory), Long.valueOf(busyThreads));
     }
 }
